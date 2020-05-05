@@ -1,4 +1,4 @@
-{% set version = '0.3.6' %}
+{% set version = "0.3.6" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -13,8 +13,8 @@ source:
   sha256: 60a51afa38e8194905cfd0ca5b3b8d43beefa0e0612928ecb6ebd8b28a696f39
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 2
   rpaths:
     - lib/R/lib/
     - lib/
@@ -23,18 +23,18 @@ requirements:
   build:
     - {{ compiler('c') }}              # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
-    - {{posix}}filesystem        # [win]
-    - {{posix}}make
-    - {{posix}}sed               # [win]
-    - {{posix}}coreutils         # [win]
-    - {{posix}}zip               # [win]
+    - {{ posix }}filesystem        # [win]
+    - {{ posix }}make
+    - {{ posix }}sed               # [win]
+    - {{ posix }}coreutils         # [win]
+    - {{ posix }}zip               # [win]
   host:
     - r-base
     - r-htmlwidgets >=0.3.2
     - r-stringr
   run:
     - r-base
-    - {{native}}gcc-libs         # [win]
+    - {{ native }}gcc-libs         # [win]
     - r-htmlwidgets >=0.3.2
     - r-stringr
 
@@ -45,10 +45,13 @@ test:
 
 about:
   home: https://rstudio.github.io/profvis/
-  license: GPL-3
+  license: GPL-3.0-only
   summary: Interactive visualizations for profiling R code.
   license_family: GPL3
 
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+    - LICENSE
 extra:
   recipe-maintainers:
     - conda-forge/r
