@@ -1,4 +1,4 @@
-{% set version = "0.3.7" %}
+{% set version = "0.3.8" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/profvis_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/profvis/profvis_{{ version }}.tar.gz
-  sha256: 43974863cb793f81dbea4b94096343c321f7739c9038980405c9b16b04a906b9
+  sha256: ec02c75bc9907a73564e691adfa8e06651ca0bd73b7915412960231cd265b4b2
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
