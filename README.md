@@ -11,6 +11,8 @@ Home: https://rstudio.github.io/profvis/
 Package license: GPL-3.0-only
 
 Summary: Interactive visualizations for profiling R code.
+
+Development: https://github.com/rstudio/profvis
 About r-profvis
 ---------------
 
@@ -19,6 +21,8 @@ Home: https://rstudio.github.io/profvis/
 Package license: GPL-3.0-only
 
 Summary: Interactive visualizations for profiling R code.
+
+Development: https://github.com/rstudio/profvis
 
 Current build status
 ====================
